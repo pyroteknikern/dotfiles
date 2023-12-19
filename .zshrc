@@ -8,7 +8,7 @@ export PATH="$PATH:~/.local/bin"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="af-magic"
+ZSH_THEME="bira"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,3 +105,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Created by `pipx` on 2023-06-08 19:24:37
 export PATH="$PATH:/home/arvyd/.local/bin"
+neofetch
+
+
+alias discord="discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
