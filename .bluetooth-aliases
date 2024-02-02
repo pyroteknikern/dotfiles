@@ -1,0 +1,9 @@
+#!/bin/bash
+Jabra="50:C2:ED:B4:17:CC"
+KILBURN="54:B7:E5:B4:6A:16"
+
+alias bt="bluetoothctl"
+alias btscan="bt --timeout 20 scan on"
+
+alias btls='bluetoothctl devices | cut -f2 -d" " | while read uuid; do bluetoothctl info $uuid; done|grep -e "Device\|Connected\|Name"'
+
