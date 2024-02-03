@@ -1,0 +1,6 @@
+#!/bin/bash
+alias lsaudio="echo outputs && pactl list short sinks"
+
+bindaudio() {
+    pactl set-default-sink $1
+}
