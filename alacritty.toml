@@ -42,5 +42,5 @@ args = ["-l", "-c", "tmux -u attach || tmux -u "]
 program = "zsh"
 
 [window]
-opacity = 0.8
+opacity = 0.5
 title = "Terminal"
