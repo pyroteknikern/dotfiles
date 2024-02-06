@@ -112,3 +112,4 @@ alias discord="discord --ignore-gpu-blocklist --disable-features=UseOzonePlatfor
 
 source .bluetooth-aliases
 source .audio-aliases
+source .wifi-aliases

@@ -1,0 +1,10 @@
+#!/bin/bash
+alias lswifi="nmcli device wifi list"
+
+connectwifi() {
+    nmcli device wifi connect $1
+}
+
+disconnectwifi() {
+    nmcli device disconnect $1
+}
