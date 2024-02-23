@@ -11,3 +11,5 @@ sudo ln -s $SCRIPT_DIR/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 sudo ln -s $SCRIPT_DIR/.audio-aliases $HOME/.audio-aliases
 
 sudo ln -s $SCRIPT_DIR/.wifi-aliases $HOME/.wifi-aliases
+
+sudo ln -s $SCRIPT_DIR/.monitor-aliases $HOME/.monitor-aliases

@@ -3,3 +3,5 @@ scanbt -scan for new devices
 
 lsaudio -list audio outputs
 bindaudio -change audio output
+
+

@@ -1,0 +1,9 @@
+clonemonitor() {
+    A="$(xrandr --listactivemonitors | grep '*')"
+    monitor1=$(echo $A | awk '{print $NF}')
+    B=$(xrandr --listmonitors | grep "1:")
+    monitor2=$(echo $B | awk '{print $NF}')
+    echo $monitor1
+    echo $monitor2
+    xrandr --output $monitor2 --same-as $monitor1 --rate 60
+    }
