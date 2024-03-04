@@ -1,5 +1,11 @@
 #!/bin/bash
-alias lsaudio="echo outputs && pactl list short sinks"
+alias lsaudio='pactl list sinks | grep "Source" -A 4'
+alias afront='pactl set-default-sink alsa_output.pci-0000_13_00.6.analog-stereo'
+alias piano='pactl load-module module-loopback source=alsa_input.pci-0000_13_00.6.analog-stereo latency_msec=1'
+
+unpiano() {
+    pactl unload-module $1
+}
 
 bindaudio() {
     pactl set-default-sink $1
