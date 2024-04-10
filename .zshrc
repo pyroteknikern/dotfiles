@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Created by `pipx` on 2023-06-08 19:24:37
 export PATH="$PATH:/home/arvyd/.local/bin"
+
 neofetch
 
 

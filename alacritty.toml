@@ -38,8 +38,8 @@ history = 10000
 multiplier = 3
 
 [shell]
-args = ["-l", "-c", "tmux -u attach || tmux -u "]
 program = "zsh"
+args = ["-l", "-c", "tmux -u attach || tmux -u "]
 
 [window]
 opacity = 0.8
