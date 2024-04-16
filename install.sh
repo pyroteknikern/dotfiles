@@ -17,14 +17,22 @@ sudo ln -s $SCRIPT_DIR/.wifi-aliases $HOME/.wifi-aliases
 sudo ln -s $SCRIPT_DIR/.monitor-aliases $HOME/.monitor-aliases
 
 
+
+# tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+curl -o ~/.tmux.snazzy.theme https://raw.githubusercontent.com/ivnvxd/tmux-snazzy/main/.tmux.snazzy.theme
 
-
+# font
 mkdir -p ~/.local/share/fonts
 
 curl --create-dirs --output-dir ~/.local/share/fonts -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DejaVuSansMono/Regular/DejaVuSansMNerdFont-Regular.ttf
 
+curl --create-dirs --output-dir ~/.local/share/fonts -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DejaVuSansMono/Regular/DejaVuSansMNerdFontMono-Regular.ttf
+
+
+# zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -32,4 +40,10 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 mkdir $HOME/setup
 
 
-
+# packages:
+# neofetch
+# git
+# tmux
+# alacritty
+# neovim
+# zsh
