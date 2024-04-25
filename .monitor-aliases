@@ -5,5 +5,5 @@ clonemonitor() {
     monitor2=$(echo $B | awk '{print $NF}')
     echo $monitor1
     echo $monitor2
-    xrandr --output $monitor2 --same-as $monitor1 --rate 60
+    xrandr --output $monitor2 --same-as $monitor1
     }
