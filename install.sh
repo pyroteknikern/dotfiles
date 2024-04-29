@@ -17,6 +17,10 @@ sudo ln -s $SCRIPT_DIR/.wifi-aliases $HOME/.wifi-aliases
 sudo ln -s $SCRIPT_DIR/.monitor-aliases $HOME/.monitor-aliases
 
 
+#sway
+mkdir $HOME/.config/sway
+sudo ln -s $SCRIPT_DIR/config $HOME/.config/sway/config
+
 
 # tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
