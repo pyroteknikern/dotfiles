@@ -21,6 +21,11 @@ sudo ln -s $SCRIPT_DIR/.monitor-aliases $HOME/.monitor-aliases
 mkdir $HOME/.config/sway
 sudo ln -s $SCRIPT_DIR/config $HOME/.config/sway/config
 
+mkdir $HOME/.config/waybar
+
+sudo ln -s $SCRIPT_DIR/waybar/config $HOME/.config/waybar/config
+sudo ln -s $SCRIPT_DIR/waybar/style.css $HOME/.config/waybar/style.css
+
 
 # tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
