@@ -8,6 +8,12 @@ output {
     waybar
 }
 
+default_border none
+default_floating_border none
+font pango: monospace 0.001
+titlebar_padding 1
+titlebar_border_thickness 0
+
 exec waybar
 
 output * bg /home/arvyd/backgrounds/wallpaper_dark.jpg fill
