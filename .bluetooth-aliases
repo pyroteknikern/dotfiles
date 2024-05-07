@@ -2,7 +2,17 @@
 Jabra="50:C2:ED:B4:17:CC"
 KILBURN="54:B7:E5:B4:6A:16"
 
+
 alias bt="bluetoothctl"
+
+reconnect() {
+    bt remove $1
+    bt --timeout 5 scan on
+    bt trust $1
+    bt pair $1
+    bt connect $1
+}
+
 alias scanbt="bt --timeout 20 scan on"
 
 alias lsbt='bluetoothctl devices | cut -f2 -d" " | while read uuid; do bluetoothctl info $uuid; done|grep -e "Device\|Connected\|Name"'

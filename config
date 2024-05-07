@@ -1,14 +1,20 @@
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
 input * {
     xkb_layout se
 }
 
 output {
-    HDMI-A-1 pos 0 0
-    DP-2 pos 1920 0
+    HDMI-A-1 pos 0 0 mode 1920x1080@75Hz
+    DP-2 pos 1920 0 mode 1920x1080@144Hz
     waybar
 }
 
-default_border none
+default_border pixel 3
 default_floating_border none
 font pango: monospace 0.001
 titlebar_padding 1
@@ -22,7 +28,26 @@ gaps inner 20
 
 set $mod Mod4
 set $browser firefox
+
+bindsym $mod+Shift+1 move container to workspace 1; workspace 1
+bindsym $mod+Shift+2 move container to workspace 2; workspace 2
+bindsym $mod+Shift+3 move container to workspace 3; workspace 3
+bindsym $mod+Shift+4 move container to workspace 4; workspace 4
+bindsym $mod+Shift+5 move container to workspace 5; workspace 5
+bindsym $mod+Shift+6 move container to workspace 6; workspace 6
+bindsym $mod+Shift+7 move container to workspace 7; workspace 7
+bindsym $mod+Shift+8 move container to workspace 8; workspace 8
+bindsym $mod+Shift+9 move container to workspace 9; workspace 9
+bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+
 bindsym $mod+b exec $browser
+
+bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy --type image/png
+
+bindsym $mod+Control+h resize shrink width
+bindsym $mod+Control+l resize grow width
+bindsym $mod+Control+j resize shrink height
+bindsym $mod+Control+k resize grow height
 
 # Default config for sway
 #
@@ -33,11 +58,6 @@ bindsym $mod+b exec $browser
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-# Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
