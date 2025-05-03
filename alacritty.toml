@@ -28,7 +28,7 @@ background = "#101421"
 foreground = "#fffbf6"
 
 [font]
-size = 17.0
+size = 10.0
 
 [font.normal]
 family = "DejaVuSansM Nerd Font"
@@ -44,3 +44,4 @@ args = ["-l", "-c", "tmux -u attach || tmux -u "]
 [window]
 opacity = 0.8
 title = "Terminal"
+dimensions = { columns = 73, lines = 20}
