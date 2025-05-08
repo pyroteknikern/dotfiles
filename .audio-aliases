@@ -1,5 +1,5 @@
 #!/bin/bash
-alias lsaudio='pactl list sinks | grep "Sink" -A 4'
+alias lsaudio='pactl list sinks | grep "Sink" -A 3'
 alias afront='pactl set-default-sink alsa_output.pci-0000_13_00.6.analog-stereo'
 alias piano='pactl load-module module-loopback source=alsa_input.pci-0000_13_00.6.analog-stereo latency_msec=1'
 
