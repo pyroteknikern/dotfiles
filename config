@@ -26,7 +26,7 @@ titlebar_border_thickness 0
 
 exec waybar
 
-output * bg /home/arvyd/backgrounds/the_witcher_3_wild_hunt_landscape_mountains.jpg fill
+output * bg /home/arvyd/repos/dotfiles/backgrounds/the_witcher_3_wild_hunt_landscape_mountains.jpg fill
 
 gaps inner 20
 
@@ -46,6 +46,7 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 bindsym $mod+b exec $browser
 
 bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy --type image/png
+bindsym $mod+Control+p exec grim -o DP-2 ~/Pictures/Screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png
 
 bindsym $mod+Control+h resize shrink width
 bindsym $mod+Control+l resize grow width
@@ -66,7 +67,8 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
+#set $menu dmenu_path | wmenu | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show drun | xargs swaymsg exec --
 
 ### Output configuration
 #

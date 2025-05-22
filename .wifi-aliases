@@ -2,7 +2,7 @@
 alias lswifi="nmcli device wifi list"
 
 wifi() {
-    nmcli device wifi connect $1
+    nmcli device wifi connect $1 --ask
 }
 
 dwifi() {
