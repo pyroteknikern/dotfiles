@@ -6,13 +6,16 @@ set $up k
 set $right l
 
 input * {
-    xkb_layout se
+    xkb_layout us,se
+    xkb_options grp:alt_shift_toggle
 }
 
 output {
     HDMI-A-1 pos 0 0 mode 1920x1080@75Hz
+    HDMI-A-1 pos 0 0 mode 3840x2160@60Hz
     DP-2 pos 1920 0 mode 1920x1080@144Hz
 }
+exec_always /home/arvyd/repos/dotfiles/get-resolution.sh
 
 bindsym $mod+t exec gammastep -t 6500:1800 -l 59.334591:18.063240
 
@@ -25,8 +28,11 @@ titlebar_padding 1
 titlebar_border_thickness 0
 
 exec waybar
+#exec steam -silent -tenfoot
 
 output * bg /home/arvyd/repos/dotfiles/backgrounds/the_witcher_3_wild_hunt_landscape_mountains.jpg fill
+
+exec /home/arvyd/repos/dotfiles/get-resolution.sh
 
 gaps inner 20
 

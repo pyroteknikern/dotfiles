@@ -114,6 +114,8 @@ alias discord="discord --ignore-gpu-blocklist --disable-features=UseOzonePlatfor
 
 alias server="ssh root@172.104.132.193"
 
+alias reboot-windows='sudo grub-reboot "Windows Boot Manager (on /dev/nvme1n1p3" && sudo reboot'
+
 source .bluetooth-aliases
 source .audio-aliases
 source .wifi-aliases
