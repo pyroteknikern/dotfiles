@@ -107,7 +107,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:/home/arvyd/.local/bin"
 export PATH="$PATH:/opt/nvim"
 
-neofetch
 
 
 alias discord="discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
